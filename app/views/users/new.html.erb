@@ -4,16 +4,16 @@
     <%= form_for(@user) do |f| %>
       
       <%= render "shared/error_messages" %>
-      <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+      <%= f.text_field :name, placeholder: "Name", autofocus: true, required: true, class: "form-control" %>
 
       
-      <%= f.email_field :email, placeholder: "E-mail", class: "form-control" %>
+      <%= f.email_field :email, placeholder: "E-mail", required: true, class: "form-control" %>
 
       
-      <%= f.password_field :password, placeholder: "Password" , class: "form-control" %>
+      <%= f.password_field :password, placeholder: "Password", required: true, class: "form-control" %>
 
      
-      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", required: true, class: "form-control" %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
