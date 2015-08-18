@@ -28,5 +28,6 @@ module SampleApp
             ActiveSupport::Dependencies.mechanism = :load
         end
     end
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
